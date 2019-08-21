@@ -12,13 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login.index');
 });
 
-Route::get('/welcome', function () {
-   	return view('index');
-});
+Route::get('/login', 'Logincontroller@index')->name('login.index');
+Route::post('/login', 'Logincontroller@valid')->name('login.valid');
+Route::get('/register', 'Logincontroller@register')->name('login.register');
+Route::post('/register', 'Logincontroller@registration')->name('login.register');
 
-//Route::resource('accounts', 'AccountController');
+Route::get('/admin', 'admincontroller@index')->name('admin.index');
 
+Route::get('/customer', 'customercontroller@index')->name('customer.index');
+
+Route::get('/logout', 'LogoutController@index')->name('logout');
 
