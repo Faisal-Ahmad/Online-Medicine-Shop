@@ -4,7 +4,7 @@
       <section class="dashboard-header section-padding">
         <div class="container-fluid">
           <header> 
-            <h1 class="h2 display">Admin Profile</h1>
+            <h1 class="h2 display">Customer Profile</h1>
           </header>
           <form method="post">
           @csrf

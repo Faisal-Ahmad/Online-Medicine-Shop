@@ -44,12 +44,11 @@
         <div class="main-menu">
           <h5 class="sidenav-heading">Main</h5>
           <ul id="side-main-menu" class="side-menu list-unstyled">                  
-            <li><a href="{{route('admin.index')}}">Profile</a></li>
-            <li><a href="">Add Product</a></li>
-            <li><a href="">View All Product</a></li>
+            <li><a href="{{route('customer.index')}}">Profile</a></li>
+            <li><a href="{{route('customer.medicines')}}">Medicines</a></li>
+            <li><a href="">My Cart</a></li>
             <li><a href="">Orders</a></li>
             <li><a href="">Purchase History</a></li>
-            <li><a href="">Comment Employee</a></li>
           </ul>
         </div>
       </div>

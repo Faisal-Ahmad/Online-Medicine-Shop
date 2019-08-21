@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\user;
+use App\medicine;
 
 class customercontroller extends Controller
 {
@@ -19,6 +20,14 @@ class customercontroller extends Controller
         if($this->sessionCheck($req)){
             $user = user::where('id', $req->session()->get('userid'))->get();
             return view('customer.index', ['customer'=>$user[0]]);
+        }else{
+            return redirect()->route('login.index');
+        }
+    }
+    public function showmedicines(Request $req){
+        if($this->sessionCheck($req)){
+            $medicine = medicine::all();
+    	   return view('customer.showmedicine', ['medicinelist'=>$medicine]);
         }else{
             return redirect()->route('login.index');
         }

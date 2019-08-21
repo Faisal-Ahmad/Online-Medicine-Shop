@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\user;
 use App\medicine;
 
@@ -124,6 +125,30 @@ class admincontroller extends Controller
             
             medicine::destroy($mid);
         return redirect()->route('admin.medicines');
+        }else{
+            return redirect()->route('login.index');
+        }
+        
+    }
+    public function order(Request $req){
+    	if($this->sessionCheck($req)){
+            
+           $order = DB::table('orders')->join('medicines',"medicines.id","=","orders.medicineId")->join('users','users.id','=',"orders.customerId")->select('orders.id','medicines.mediname','users.name','orders.quantity','orders.date')->where('orders.confirm',0)->get();
+           
+          $result = json_decode($order, true);
+          return view('admin.orders', ['orderlist'=>$result]);
+        }else{
+            return redirect()->route('login.index');
+        }
+        
+    }
+    public function purchase(Request $req){
+    	if($this->sessionCheck($req)){
+            
+           $purchase = DB::table('purchases')->join('medicines',"medicines.id","=","purchases.medicineId")->join('users','users.id','=',"purchases.customerId")->select('purchases.id','medicines.mediname','users.name','purchases.quantity','purchases.price','purchases.paymenttype','purchases.purchasedate')->get();
+        
+          $result = json_decode($purchase, true);
+          return view('admin.purchase', ['purchaselist'=>$result]);
         }else{
             return redirect()->route('login.index');
         }

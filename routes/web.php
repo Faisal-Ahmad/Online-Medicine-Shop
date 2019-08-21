@@ -27,12 +27,15 @@ Route::get('/showcustomer', 'admincontroller@showcustomer')->name('admin.showcus
 Route::get('/deletecustomer/{cid}', 'admincontroller@delete')->name('admin.deletecustomer');
 Route::post('/deletecustomer/{cid}', 'admincontroller@remove')->name('admin.deletecustomer');
 Route::get('/medicines', 'admincontroller@showmedicines')->name('admin.medicines');
+Route::get('/orders', 'admincontroller@order')->name('admin.orders');
 Route::get('/editmedicine/{mid}', 'admincontroller@edit')->name('admin.editmedicine');
 Route::post('/editmedicine/{mid}', 'admincontroller@update')->name('admin.editmedicine');
 Route::get('/deletemedicine/{mid}', 'admincontroller@deletemed')->name('admin.deletemedicine');
 Route::post('/deletemedicine/{mid}', 'admincontroller@removemed')->name('admin.deletemedicine');
+Route::get('/purchase', 'admincontroller@purchase')->name('admin.purchase');
 
 Route::get('/customer', 'customercontroller@index')->name('customer.index');
+Route::get('/customer/showmedicine', 'customercontroller@showmedicines')->name('customer.medicines');
 
 Route::get('/logout', 'LogoutController@index')->name('logout');
 

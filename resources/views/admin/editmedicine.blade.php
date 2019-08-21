@@ -10,7 +10,7 @@
           @csrf
             <div class="form-group">
               <label for="formGroupExampleInput">Name </label>
-              <input type="text" class="form-control" value="{{$medicine['name']}}" name="name" id="formGroupExampleInput">
+              <input type="text" class="form-control" value="{{$medicine['mediname']}}" name="name" id="formGroupExampleInput">
             </div>
             <div class="form-group">
               <label for="formGroupExampleInput">Price </label>

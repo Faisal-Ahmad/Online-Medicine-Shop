@@ -47,10 +47,9 @@
             <li><a href="{{route('admin.index')}}">Profile</a></li>
             <li><a href="{{route('admin.addmedicine')}}">Add Medicine</a></li>
             <li><a href="{{route('admin.showcustomer')}}">Customers</a></li>
-            <li><a href="{{route('admin.index')}}">Orders</a></li>
+            <li><a href="{{route('admin.orders')}}">Order List</a></li>
             <li><a href="{{route('admin.medicines')}}">Medicines</a></li>
-            <li><a href="{{route('admin.index')}}">Order list</a></li>
-            <li><a href="{{route('admin.index')}}">Purchase History</a></li>
+            <li><a href="{{route('admin.purchase')}}">Purchase History</a></li>
           </ul>
         </div>
       </div>

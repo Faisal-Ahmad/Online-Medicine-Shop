@@ -1,4 +1,4 @@
-@extends('admin.layout.main')
+@extends('customer.layout.main')
 @section('content')
 
 <section>
@@ -36,8 +36,8 @@
                           <td>{{$medicine['quantity']}}</td>
                           <td>{{$medicine['available']}}</td>
                           <td>
-                                <a href="{{route('admin.editmedicine', $medicine['id'])}}">Edit</a> |
-                                <a href="{{route('admin.deletemedicine', $medicine['id'])}}">Delete</a>
+                                <a href="{{route('admin.editmedicine', $medicine['id'])}}">Buy</a> |
+                                <a href="{{route('admin.deletemedicine', $medicine['id'])}}">Add To Cart</a>
                           </td>
                         </tr>
                       </tbody>
