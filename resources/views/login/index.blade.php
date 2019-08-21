@@ -40,9 +40,8 @@
               <div class="form-group-material">
                 <input id="login-password" type="password" name="password" required data-msg="Please enter your password" class="input-material">
                 <label for="login-password" class="label-material">Password</label>
-                
-              </div>
                 {{session('msg')}}
+              </div>
               <br/>
               <div class="form-group text-center"><input type="submit" value="Login" class="btn btn-primary">
               </div>

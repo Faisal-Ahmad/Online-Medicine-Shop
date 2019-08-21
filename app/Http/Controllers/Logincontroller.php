@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\registerrequest;
+use App\Http\Requests\loginrequest;
 use App\user;
 
 class Logincontroller extends Controller
@@ -13,7 +14,6 @@ class Logincontroller extends Controller
 
 	public function valid(Request $req){
 		$user = user::where('email',$req->email)->where('password',$req->password)->get();
-		echo $user[0]['admin'];
 		if(count($user)>0)
 		{
 			$req->session()->put('userid', $user[0]['id']);
@@ -55,8 +55,7 @@ class Logincontroller extends Controller
 			$user->admin=0;
 		}
 		$user->save();
-		
-		return view('login.index');
+		return redirect()->route('login.index');
 	}
 
 }

@@ -25,7 +25,7 @@ class registerrequest extends FormRequest
     {
         return [
                 'name'=>'required',
-                'contact'=>'required|max:11',
+                'contact'=>'required|min:11|max:11',
                 'email'=>'required',
                 'address'=>'required',
                 'password'=>'required|min:5'
@@ -37,6 +37,7 @@ class registerrequest extends FormRequest
 
             "uname.required"=> "Name Required",
             "contact.required"=> "Contact Required",
+            "contact.min"=> "Number must 11 digits",
             "contact.max"=> "Number must 11 digits",
             "email.required"=> "Email Required",
             "address.required"=> "Address Required",

@@ -67,7 +67,7 @@
               </div>
               @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
-                @endforeach
+              @endforeach
               <div class="form-group text-center">
                 <input id="register" type="submit" value="Register" class="btn btn-primary">
               </div>
