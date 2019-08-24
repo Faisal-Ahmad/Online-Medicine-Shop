@@ -36,6 +36,8 @@ Route::get('/purchase', 'admincontroller@purchase')->name('admin.purchase');
 
 Route::get('/customer', 'customercontroller@index')->name('customer.index');
 Route::get('/customer/showmedicine', 'customercontroller@showmedicines')->name('customer.medicines');
+Route::get('/search', 'customercontroller@searchindex')->name('customer.search');
+Route::get('/search/action', 'customercontroller@search')->name('customer.action');
 
 Route::get('/logout', 'LogoutController@index')->name('logout');
 

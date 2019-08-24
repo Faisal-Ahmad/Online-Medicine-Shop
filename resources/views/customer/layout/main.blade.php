@@ -45,7 +45,7 @@
           <h5 class="sidenav-heading">Main</h5>
           <ul id="side-main-menu" class="side-menu list-unstyled">                  
             <li><a href="{{route('customer.index')}}">Profile</a></li>
-            <li><a href="{{route('customer.medicines')}}">Medicines</a></li>
+            <li><a href="{{route('customer.search')}}">Medicines</a></li>
             <li><a href="">My Cart</a></li>
             <li><a href="">Orders</a></li>
             <li><a href="">Purchase History</a></li>
@@ -85,3 +85,4 @@
     <script src="js/front.js"></script>
   </body>
 </html>
+@yield('script')
